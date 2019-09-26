@@ -27,6 +27,18 @@ public class NegativeLoginTests extends TestBase {
         app.getNavigationHelper().isWrongCredential();
 
     }
+    @Test(enabled = true)
+    public void testLoginEmptyUser() throws Exception {
+        app.getNavigationHelper().enterLoginCredentials(" ","testuser");
+        app.getNavigationHelper().isWrongCredential();
+
+    }
+    @Test(enabled = true)
+    public void testLoginEmptyUserAndPassword() throws Exception {
+        app.getNavigationHelper().enterLoginCredentials(" "," ");
+        app.getNavigationHelper().isWrongCredential();
+
+    }
 
 
 }
